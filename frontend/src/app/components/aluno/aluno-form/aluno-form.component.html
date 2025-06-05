@@ -1,0 +1,45 @@
+<div>
+  <h2>{{ isEditMode ? 'Editar Aluno' : 'Novo Aluno' }}</h2>
+
+  <form [formGroup]="alunoForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" formControlName="nome">
+      <div *ngIf="alunoForm.get('nome')?.invalid && (alunoForm.get('nome')?.dirty || alunoForm.get('nome')?.touched)">
+        <small *ngIf="alunoForm.get('nome')?.errors?.['required']" class="text-danger">Nome é obrigatório.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="ira">IRA:</label>
+      <input type="number" id="ira" formControlName="ira">
+      <div *ngIf="alunoForm.get('ira')?.invalid && (alunoForm.get('ira')?.dirty || alunoForm.get('ira')?.touched)">
+        <small *ngIf="alunoForm.get('ira')?.errors?.['required']" class="text-danger">IRA é obrigatório.</small>
+        <small *ngIf="alunoForm.get('ira')?.errors?.['min']" class="text-danger">IRA deve ser no mínimo 0.</small>
+        <small *ngIf="alunoForm.get('ira')?.errors?.['max']" class="text-danger">IRA deve ser no máximo 10.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="cursoId">Curso ID:</label>
+      <input type="text" id="cursoId" formControlName="cursoId">
+      <div *ngIf="alunoForm.get('cursoId')?.invalid && (alunoForm.get('cursoId')?.dirty || alunoForm.get('cursoId')?.touched)">
+        <small *ngIf="alunoForm.get('cursoId')?.errors?.['required']" class="text-danger">Curso ID é obrigatório.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="periodoIngressoId">Período Ingresso ID:</label>
+      <input type="text" id="periodoIngressoId" formControlName="periodoIngressoId">
+      <div *ngIf="alunoForm.get('periodoIngressoId')?.invalid && (alunoForm.get('periodoIngressoId')?.dirty || alunoForm.get('periodoIngressoId')?.touched)">
+        <small *ngIf="alunoForm.get('periodoIngressoId')?.errors?.['required']" class="text-danger">Período Ingresso ID é obrigatório.</small>
+      </div>
+    </div>
+
+    <hr>
+    <button type="submit" [disabled]="alunoForm.invalid">
+      {{ isEditMode ? 'Atualizar' : 'Salvar' }}
+    </button>
+    <button type="button" (click)="cancelar()">Cancelar</button>
+  </form>
+</div>

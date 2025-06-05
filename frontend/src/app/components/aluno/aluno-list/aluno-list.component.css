@@ -1,0 +1,84 @@
+/* Container principal */
+div {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Botão "Novo Aluno" */
+button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Cabeçalho da tabela */
+thead {
+  background-color: #1976d2;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Mensagem de nenhum aluno */
+p {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* Botões de ação */
+td button {
+  background-color: #f57c00;
+  margin: 0 4px;
+}
+
+td button:hover {
+  background-color: #ef6c00;
+}
+
+/* Botão excluir */
+td button:last-child {
+  background-color: #d32f2f;
+}
+
+td button:last-child:hover {
+  background-color: #c62828;
+}
