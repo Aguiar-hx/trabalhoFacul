@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/curriculos") // Conforme seu OpenAPI
+@RequestMapping("/api/curriculos") // Conforme seu OpenAPI
 @CrossOrigin(origins = "*") // Permite requisições de qualquer origem, ajuste para produção
 public class CurriculoController {
 

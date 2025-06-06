@@ -1,0 +1,23 @@
+# Node
+node_modules/
+dist/
+.angular/
+frontend/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+
+# Docker
+*.log
+
+# VSCode
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
