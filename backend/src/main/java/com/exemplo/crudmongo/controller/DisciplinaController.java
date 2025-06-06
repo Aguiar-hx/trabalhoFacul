@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/disciplinas") // As per your OpenAPI
+@RequestMapping("/api/disciplinas") // As per your OpenAPI
 @CrossOrigin(origins = "*") // Adjust for production if needed
 public class DisciplinaController {
 

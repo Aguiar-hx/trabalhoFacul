@@ -1,13 +1,16 @@
+// frontend/src/app/AppComponent.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router'; // Importe RouterModule
 
 @Component({
   selector: 'app-root',
-  standalone: true,         // CORRETO - Mantém como standalone
-  imports: [RouterOutlet],    // CORRETO - Importa o RouterOutlet
-  templateUrl: './app.html',  // CORRETO - Aponta para o seu app.html
-  styleUrls: ['./app.css']    // CORRIGIDO - de styleUrl para styleUrls
+  standalone: true,
+  imports: [
+    RouterModule // <-- GARANTA QUE ISTO ESTEJA AQUI
+  ],
+  templateUrl: './app.html',
+  styleUrls: ['./app.css']
 })
-export class AppComponent {   // CORRIGIDO - nome da classe para AppComponent
-  title = 'frontend';       // Esta linha é opcional, pode manter ou remover
+export class AppComponent {
+  title = 'frontend';
 }

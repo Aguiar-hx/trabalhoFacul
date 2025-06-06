@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/turmas") // Conforme seu OpenAPI
+@RequestMapping("/api/turmas") // Conforme seu OpenAPI
 @CrossOrigin(origins = "*") // Ajuste para produção, se necessário
 public class TurmaController {
 
