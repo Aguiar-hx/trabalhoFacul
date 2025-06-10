@@ -1,13 +1,42 @@
+// Define o pacote onde esta interface está localizada. Repositórios são responsáveis pela comunicação com o banco de dados.
 package com.exemplo.crudmongo.repository;
 
-import com.exemplo.crudmongo.Model.Aluno;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+// Importações de classes e anotações necessárias.
+import com.exemplo.crudmongo.Model.Aluno; // Importa o modelo de dados 'Aluno' para que o repositório saiba com qual tipo de entidade ele está trabalhando.
+import org.springframework.data.mongodb.repository.MongoRepository; // Importa a interface principal do Spring Data MongoDB.
+import org.springframework.stereotype.Repository; // Importa a anotação @Repository, que marca a interface como um componente de persistência do Spring.
 
-@Repository // Opcional para interfaces que estendem MongoRepository, mas boa prática
+/**
+ * A anotação @Repository indica ao Spring que esta interface é um "Repositório",
+ * um componente responsável pelo acesso e manipulação de dados.
+ * Embora seja opcional para interfaces que estendem MongoRepository (pois o Spring já as detecta),
+ * é uma boa prática para clareza e para permitir a tradução de exceções específicas do banco de dados.
+ */
+@Repository
+/**
+ * Esta é a interface do Repositório para a entidade Aluno.
+ * Ao estender 'MongoRepository', esta interface herda automaticamente uma grande variedade
+ * de métodos para realizar operações CRUD (Criar, Ler, Atualizar, Deletar) no banco de dados.
+ * Não precisamos escrever a implementação desses métodos; o Spring Data MongoDB faz isso por nós em tempo de execução.
+ *
+ * @param <Aluno> O tipo da entidade que este repositório gerencia.
+ * @param <String> O tipo do campo ID da entidade (o campo anotado com @Id na classe Aluno).
+ */
 public interface AlunoRepository extends MongoRepository<Aluno, String> {
-    // Você pode adicionar métodos de query customizados aqui se precisar no futuro
-    // Exemplo: List<Aluno> findByNomeContainingIgnoreCase(String nome);
-    // Exemplo: List<Aluno> findByCursoId(String cursoId);
-    // Exemplo: List<Aluno> findByIraGreaterThan(Double ira);
+
+    // A interface está vazia, mas já é extremamente poderosa!
+    // Métodos herdados do MongoRepository incluem:
+    // - save(Aluno aluno): Salva ou atualiza um aluno.
+    // - findById(String id): Busca um aluno pelo seu ID.
+    // - findAll(): Retorna uma lista de todos os alunos.
+    // - deleteById(String id): Deleta um aluno pelo seu ID.
+    // - count(): Conta quantos alunos existem.
+    // - e muitos outros...
+
+    // Você pode adicionar métodos de consulta customizados aqui se precisar no futuro.
+    // O Spring Data MongoDB criará a consulta automaticamente com base no nome do método.
+    // Exemplos:
+    // List<Aluno> findByNomeContainingIgnoreCase(String nome); // Encontraria alunos cujo nome contém o texto fornecido, ignorando maiúsculas/minúsculas.
+    // List<Aluno> findByCursoId(String cursoId); // Encontraria todos os alunos de um determinado curso.
+    // List<Aluno> findByIraGreaterThan(Double ira); // Encontraria todos os alunos com IRA maior que o valor fornecido.
 }

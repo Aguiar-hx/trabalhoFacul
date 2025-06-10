@@ -11,7 +11,7 @@
     </div>
 
     <div>
-      <label for="ira">IRA:</label>
+      <label for="ira">IRA(significa Índice de Rendimento Acadêmico.):</label>
       <input type="number" id="ira" formControlName="ira">
       <div *ngIf="alunoForm.get('ira')?.invalid && (alunoForm.get('ira')?.dirty || alunoForm.get('ira')?.touched)">
         <small *ngIf="alunoForm.get('ira')?.errors?.['required']" class="text-danger">IRA é obrigatório.</small>

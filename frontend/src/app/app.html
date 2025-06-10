@@ -1,9 +1,23 @@
+<!-- Início do menu de navegação -->
 <nav>
+  <!-- Link para a rota /alunos, com destaque se estiver ativa -->
   <a routerLink="/alunos" routerLinkActive="active-link">Alunos</a> |
+
+  <!-- Link para /curriculos, aplica a classe "active-link" se for a rota ativa -->
   <a routerLink="/curriculos" routerLinkActive="active-link">Currículos</a> |
+
+  <!-- Link para /cursos -->
   <a routerLink="/cursos" routerLinkActive="active-link">Cursos</a> |
+
+  <!-- Link para /disciplinas -->
   <a routerLink="/disciplinas" routerLinkActive="active-link">Disciplinas</a> |
+
+  <!-- Link para /turmas -->
   <a routerLink="/turmas" routerLinkActive="active-link">Turmas</a>
 </nav>
+
+<!-- Linha horizontal separando o menu do conteúdo -->
 <hr>
+
+<!-- Ponto onde os componentes das rotas serão carregados dinamicamente -->
 <router-outlet></router-outlet>

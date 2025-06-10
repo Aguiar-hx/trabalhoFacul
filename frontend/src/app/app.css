@@ -1,19 +1,19 @@
-/* Estilo geral para os links no menu */
+/* Estilo geral para os links no menu de navegação */
 nav a {
-  font-weight: bold;
-  color: #007bff; /* Um azul bonito */
-  text-decoration: none; /* Tira o sublinhado */
-  padding: 5px;
-  transition: color 0.3s;
+  font-weight: bold;               /* Deixa o texto em negrito */
+  color: #007bff;                  /* Define a cor azul padrão dos links */
+  text-decoration: none;          /* Remove o sublinhado padrão dos links */
+  padding: 5px;                   /* Adiciona um pequeno espaçamento interno */
+  transition: color 0.3s;         /* Suaviza a transição de cor ao interagir */
 }
 
 /* Estilo para quando o mouse passa por cima do link */
 nav a:hover {
-  color: #0056b3; /* Um azul mais escuro */
+  color: #0056b3;                 /* Muda para um azul mais escuro ao passar o mouse */
 }
 
-/* Estilo para o link da página que está ATIVA */
+/* Estilo para o link que representa a página ativa */
 nav a.active-link {
-  color: #d9534f; /* Um vermelho, para destacar */
-  border-bottom: 2px solid #d9534f;
+  color: #d9534f;                 /* Muda a cor para vermelho para destacar */
+  border-bottom: 2px solid #d9534f; /* Adiciona uma linha inferior vermelha como indicador visual */
 }
