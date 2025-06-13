@@ -1,0 +1,100 @@
+/* Estilo aplicado ao container principal (provavelmente o que envolve a lista e os botões). */
+div {
+  max-width: 1000px; /* Define a largura máxima do container. */
+  margin: 2rem auto; /* Define as margens. '2rem' para cima e para baixo, e 'auto' para esquerda e direita, o que centraliza o container na página. */
+  padding: 2rem; /* Adiciona um bom espaçamento interno em todos os lados. */
+  background-color: #ffffff; /* Define a cor de fundo como branco. */
+  border-radius: 8px; /* Arredonda os cantos do container. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Adiciona uma sombra muito sutil ao redor do container, dando um efeito de "cartão flutuante". */
+  font-family: 'Segoe UI', sans-serif; /* Define a família de fontes para o texto. */
+}
+
+/* Estilo para todos os títulos <h2>. */
+h2 {
+  color: #2c3e50; /* Define a cor do texto para um azul-escuro. */
+  margin-bottom: 1rem; /* Adiciona uma margem na parte de baixo do título. */
+  text-align: center; /* Centraliza o texto do título. */
+}
+
+/* Estilo geral para todos os botões <button>. */
+button {
+  padding: 0.5rem 1rem; /* Adiciona espaçamento interno para o botão não ficar apertado. */
+  margin: 0.5rem 0; /* Adiciona margem na vertical para espaçar o botão de outros elementos. */
+  font-size: 1rem; /* Define o tamanho do texto do botão. */
+  font-weight: bold; /* Deixa o texto do botão em negrito. */
+  border: none; /* Remove qualquer borda padrão. */
+  border-radius: 5px; /* Arredonda os cantos do botão. */
+  background-color: #3498db; /* Define uma cor de fundo azul padrão. */
+  color: white; /* Define a cor do texto para branco. */
+  cursor: pointer; /* Muda o cursor do mouse para uma "mãozinha" ao passar sobre o botão. */
+  transition: background-color 0.3s; /* Cria uma transição suave na cor de fundo com duração de 0.3s. */
+}
+
+/* Estilo para o efeito 'hover' (quando o mouse está sobre o botão). */
+button:hover {
+  background-color: #2980b9; /* Escurece um pouco a cor de fundo do botão para dar um feedback visual. */
+}
+
+/* Estilo para todas as tabelas <table>. */
+table {
+  width: 100%; /* Faz a tabela ocupar 100% da largura do seu container. */
+  border-collapse: collapse; /* Remove o espaço entre as bordas das células, criando uma tabela com linhas simples. */
+  margin-top: 1rem; /* Adiciona uma margem no topo da tabela. */
+}
+
+/* Estilo aplicado tanto aos cabeçalhos (<th>) quanto às células de dados (<td>) da tabela. */
+th, td {
+  padding: 0.8rem; /* Adiciona um bom espaçamento interno nas células. */
+  border: 1px solid #ddd; /* Adiciona uma borda cinza claro em todos os lados da célula. */
+  text-align: center; /* Centraliza o texto dentro da célula. */
+}
+
+/* Estilo para o cabeçalho da tabela (<thead>). */
+thead {
+  background-color: #f4f6f7; /* Define uma cor de fundo cinza bem clara para o cabeçalho. */
+}
+
+/* Estilo para as linhas pares (even) do CORPO da tabela (<tbody>). */
+/* Isso cria um efeito de "zebra" na tabela, melhorando a legibilidade. */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Define uma cor de fundo cinza um pouco mais clara para as linhas pares. */
+}
+
+/* Estilo para o efeito 'hover' nas linhas do CORPO da tabela (<tbody>). */
+tbody tr:hover {
+  background-color: #f1f1f1; /* Muda a cor de fundo da linha para um cinza mais escuro quando o mouse passa sobre ela. */
+}
+
+/* Estilo específico para botões que estão DENTRO de uma célula da tabela (<td>). */
+td button {
+  margin: 0 5px; /* Adiciona uma pequena margem horizontal para espaçar os botões (Editar/Excluir). */
+  padding: 0.4rem 0.8rem; /* Deixa os botões dentro da tabela um pouco menores. */
+  font-size: 0.9rem; /* Diminui a fonte dos botões dentro da tabela. */
+}
+
+/* Estilo para o PRIMEIRO botão dentro de uma célula da tabela (<td>). No seu caso, o botão "Editar". */
+td button:first-child {
+  background-color: #2ecc71; /* Define a cor de fundo para verde. */
+}
+
+/* Estilo 'hover' para o primeiro botão na célula. */
+td button:first-child:hover {
+  background-color: #27ae60; /* Escurece o tom de verde. */
+}
+
+/* Estilo para o ÚLTIMO botão dentro de uma célula da tabela (<td>). No seu caso, o botão "Excluir". */
+td button:last-child {
+  background-color: #e74c3c; /* Define a cor de fundo para vermelho. */
+}
+
+/* Estilo 'hover' para o último botão na célula. */
+td button:last-child:hover {
+  background-color: #c0392b; /* Escurece o tom de vermelho. */
+}
+
+/* Estilo para todos os parágrafos <p>. */
+p {
+  text-align: center; /* Centraliza o texto (usado na mensagem "Nenhum item cadastrado"). */
+  font-style: italic; /* Deixa o texto em itálico. */
+  color: #7f8c8d; /* Define a cor do texto para um cinza. */
+}

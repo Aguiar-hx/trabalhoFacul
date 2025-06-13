@@ -1,0 +1,37 @@
+<div>
+  <h2>Lista de Disciplinas</h2>
+  <button (click)="novaDisciplina()">Nova Disciplina</button>
+  
+  <hr>
+  
+  <div *ngIf="disciplinas.length === 0; else lista">
+    <p>Nenhuma disciplina cadastrada.</p>
+  </div>
+
+  <ng-template #lista>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Carga Horária</th>
+          <th>Ementa</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let disciplina of disciplinas">
+          <td>{{ disciplina.id }}</td>
+          <td>{{ disciplina.nome }}</td>
+          <td>{{ disciplina.cargaHoraria }}</td>
+          <td>{{ disciplina.ementa }}</td>
+          
+          <td>
+            <button (click)="editarDisciplina(disciplina.id)">Editar</button>
+            <button (click)="excluirDisciplina(disciplina.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

@@ -1,0 +1,60 @@
+/* Estilo aplicado a todos os elementos <div> da página. */
+div {
+  padding: 2rem; /* Adiciona um espaçamento interno de 2rem em todos os lados (cima, baixo, esquerda, direita). */
+  font-family: Arial, sans-serif; /* Define a fonte do texto. O navegador tentará usar Arial, e se não encontrar, usará uma fonte genérica sans-serif. */
+}
+
+/* Estilo para todos os títulos <h2>. */
+h2 {
+  color: #2c3e50; /* Define a cor do texto do título para um azul-escuro. */
+  margin-bottom: 1rem; /* Adiciona uma margem na parte de baixo do título, afastando-o do conteúdo seguinte. */
+}
+
+/* Estilo geral para todos os botões <button>. */
+button {
+  margin: 0.2rem; /* Adiciona uma pequena margem externa ao redor de cada botão. */
+  padding: 0.4rem 1rem; /* Adiciona espaçamento interno (0.4rem na vertical, 1rem na horizontal) para o texto não ficar colado nas bordas. */
+  background-color: #3498db; /* Define a cor de fundo para um azul. */
+  color: white; /* Define a cor do texto para branco. */
+  border: none; /* Remove qualquer borda padrão do botão. */
+  border-radius: 6px; /* Arredonda os cantos do botão. */
+  cursor: pointer; /* Muda o cursor do mouse para uma "mãozinha" quando ele passa sobre o botão, indicando que é clicável. */
+  transition: background-color 0.3s ease; /* Cria uma transição suave na cor de fundo (duração de 0.3s) quando ela muda, como no 'hover'. */
+}
+
+/* Estilo para o efeito 'hover' (quando o mouse está sobre o botão). */
+button:hover {
+  background-color: #2980b9; /* Escurece um pouco a cor de fundo do botão para dar um feedback visual ao usuário. */
+}
+
+/* Estilo para todas as tabelas <table>. */
+table {
+  width: 100%; /* Faz a tabela ocupar 100% da largura do seu container. */
+  border-collapse: collapse; /* Remove o espaço entre as bordas das células, criando uma tabela com linhas simples. */
+  margin-top: 1rem; /* Adiciona uma margem no topo da tabela, afastando-a do conteúdo acima. */
+  background-color: #f9f9f9; /* Define uma cor de fundo cinza bem clara para a tabela. */
+}
+
+/* Estilo aplicado tanto aos cabeçalhos (<th>) quanto às células de dados (<td>) da tabela. */
+th, td {
+  text-align: left; /* Alinha o texto à esquerda dentro da célula. */
+  padding: 0.75rem; /* Adiciona um bom espaçamento interno nas células. */
+  border-bottom: 1px solid #ddd; /* Adiciona uma linha cinza claro na parte de baixo de cada linha. */
+}
+
+/* Estilo específico para os cabeçalhos da tabela (<th>). */
+th {
+  background-color: #34495e; /* Define uma cor de fundo azul-acinzentada escura para o cabeçalho. */
+  color: white; /* Define a cor do texto do cabeçalho para branco. */
+}
+
+/* Estilo específico para as células de dados da tabela (<td>). */
+td {
+  vertical-align: top; /* Alinha o conteúdo da célula no topo, útil se uma célula tiver mais texto que outra na mesma linha. */
+}
+
+/* Estilo para todos os parágrafos <p>. */
+p {
+  font-style: italic; /* Deixa o texto do parágrafo em itálico. */
+  color: #7f8c8d; /* Define a cor do texto para um cinza. */
+}

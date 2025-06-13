@@ -1,0 +1,34 @@
+<div>
+  <h2>{{ isEditMode ? 'Editar Turma' : 'Nova Turma' }}</h2>
+
+  <form [formGroup]="turmaForm" (ngSubmit)="onSubmit()">
+    
+    <div>
+      <label for="disciplinaId">Disciplina ID:</label>
+      <input type="text" id="disciplinaId" formControlName="disciplinaId">
+    </div>
+
+    <div>
+      <label for="ano">Ano:</label>
+      <input type="number" id="ano" formControlName="ano">
+    </div>
+
+    <div>
+      <label for="semestre">Semestre:</label>
+      <input type="number" id="semestre" formControlName="semestre">
+    </div>
+
+    <div>
+      <label for="professor">Professor:</label>
+      <input type="text" id="professor" formControlName="professor">
+    </div>
+
+    <hr>
+    
+    <button type="submit" [disabled]="turmaForm.invalid">
+      {{ isEditMode ? 'Atualizar' : 'Salvar' }}
+    </button>
+    
+    <button type="button" (click)="cancelar()">Cancelar</button>
+  </form>
+</div>

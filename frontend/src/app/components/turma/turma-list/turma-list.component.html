@@ -1,0 +1,36 @@
+<div>
+  <h2>Lista de Turmas</h2>
+  <button (click)="novaTurma()">Nova Turma</button>
+  
+  <hr>
+  
+  <div *ngIf="turmas.length === 0; else lista">
+    <p>Nenhuma turma cadastrada.</p>
+  </div>
+
+  <ng-template #lista>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Disciplina ID</th>
+          <th>Ano/Semestre</th>
+          <th>Professor</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let turma of turmas">
+          <td>{{ turma.id }}</td>
+          <td>{{ turma.disciplinaId }}</td>
+          <td>{{ turma.ano }}/{{ turma.semestre }}</td> <td>{{ turma.professor }}</td>
+          
+          <td>
+            <button (click)="editarTurma(turma.id)">Editar</button>
+            <button (click)="excluirTurma(turma.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

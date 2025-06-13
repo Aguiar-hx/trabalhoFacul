@@ -1,0 +1,39 @@
+<div>
+  <h2>Lista de Cursos</h2>
+  <button (click)="novoCurso()">Novo Curso</button>
+  
+  <hr>
+  
+  <div *ngIf="cursos.length === 0; else lista">
+    <p>Nenhum curso cadastrado.</p>
+  </div>
+
+  <ng-template #lista>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Nível</th>
+          <th>Modalidade</th>
+          <th>Turno</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of cursos">
+          <td>{{ curso.id }}</td>
+          <td>{{ curso.nome }}</td>
+          <td>{{ curso.nivel }}</td>
+          <td>{{ curso.modalidade }}</td>
+          <td>{{ curso.turno }}</td>
+          
+          <td>
+            <button (click)="editarCurso(curso.id)">Editar</button>
+            <button (click)="excluirCurso(curso.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

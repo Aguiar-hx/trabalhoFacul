@@ -1,0 +1,37 @@
+<div>
+  <h2>Lista de Currículos</h2>
+  <button (click)="novoCurriculo()">Novo Currículo</button>
+  
+  <hr>
+  
+  <div *ngIf="curriculos.length === 0; else lista">
+    <p>Nenhum currículo cadastrado.</p>
+  </div>
+
+  <ng-template #lista>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Curso ID</th>
+          <th>Ano/Semestre</th>
+          <th>Disciplinas Obrigatórias</th>
+          <th>Disciplinas Optativas</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curriculo of curriculos">
+          <td>{{ curriculo.id }}</td> <td>{{ curriculo.cursoId }}</td> <td>{{ curriculo.ano }}/{{ curriculo.semestre }}</td> <td>{{ curriculo.disciplinasObrigatorias.join(', ') }}</td>
+
+          <td>{{ curriculo.disciplinasOptativas.join(', ') }}</td>
+
+          <td>
+            <button (click)="editarCurriculo(curriculo.id)">Editar</button>
+            <button (click)="excluirCurriculo(curriculo.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

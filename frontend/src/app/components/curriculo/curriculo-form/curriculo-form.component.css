@@ -1,0 +1,85 @@
+/* Estilo aplicado a todos os elementos <div> da página. */
+div {
+  padding: 2rem; /* Adiciona um espaçamento interno de 2rem em todos os lados (cima, baixo, esquerda, direita). */
+  font-family: Arial, sans-serif; /* Define a fonte do texto. O navegador tentará usar Arial, e se não encontrar, usará uma fonte genérica sans-serif. */
+  max-width: 800px; /* Define a largura máxima do elemento. Ele não ficará mais largo que 800 pixels. */
+  margin: auto; /* Quando combinado com max-width, este comando centraliza o elemento na página horizontalmente. */
+}
+
+/* Estilo para todos os títulos <h2>. */
+h2 {
+  margin-bottom: 1rem; /* Adiciona uma margem na parte de baixo do título, afastando-o do conteúdo seguinte. */
+  color: #2c3e50; /* Define a cor do texto do título para um azul-escuro. */
+}
+
+/* Estilo para todas as etiquetas <label> dos formulários. */
+label {
+  display: block; /* Faz com que o label ocupe toda a largura disponível, colocando o campo de input abaixo dele. */
+  font-weight: bold; /* Deixa o texto do label em negrito. */
+  margin-bottom: 0.3rem; /* Adiciona uma pequena margem abaixo do label. */
+  margin-top: 1rem; /* Adiciona uma margem acima do label, separando os campos do formulário. */
+}
+
+/* Estilo para todos os campos de texto <input>. */
+input {
+  width: 100%; /* Faz o campo de input ocupar 100% da largura do seu container (o <div>). */
+  padding: 0.5rem; /* Adiciona um espaçamento interno para o texto não ficar colado nas bordas. */
+  margin-bottom: 0.3rem; /* Adiciona uma pequena margem abaixo, antes da mensagem de erro. */
+  border: 1px solid #ccc; /* Define uma borda cinza clara de 1 pixel. */
+  border-radius: 4px; /* Arredonda os cantos do campo de input. */
+  font-size: 1rem; /* Define o tamanho da fonte do texto que o usuário digita. */
+}
+
+/* Estilo para as mensagens de erro (elementos <small> com a classe 'text-danger'). */
+small.text-danger {
+  color: #e74c3c; /* Define a cor do texto para um vermelho, indicando erro. */
+  font-size: 0.85rem; /* Deixa a fonte um pouco menor que o texto normal. */
+}
+
+/* Estilo geral para todos os botões <button>. */
+button {
+  margin: 0.4rem 0.4rem 0.4rem 0; /* Define as margens (cima, direita, baixo, esquerda) para espaçar os botões. */
+  padding: 0.5rem 1rem; /* Adiciona espaçamento interno para o texto do botão não ficar colado nas bordas. */
+  border: none; /* Remove qualquer borda padrão do botão. */
+  border-radius: 6px; /* Arredonda os cantos do botão. */
+  font-weight: bold; /* Deixa o texto do botão em negrito. */
+  cursor: pointer; /* Muda o cursor do mouse para uma "mãozinha" quando ele passa sobre o botão, indicando que é clicável. */
+  transition: background-color 0.3s ease; /* Cria uma transição suave na cor de fundo quando ela muda (ex: no hover). */
+}
+
+/* Estilo específico para botões de submissão de formulário (ex: Salvar, Atualizar). */
+button[type="submit"] {
+  background-color: #2ecc71; /* Define a cor de fundo para um verde. */
+  color: white; /* Define a cor do texto para branco. */
+}
+
+/* Estilo para o botão de submissão quando ele está desabilitado. */
+button[type="submit"]:disabled {
+  background-color: #bdc3c7; /* Muda a cor de fundo para um cinza claro. */
+  cursor: not-allowed; /* Muda o cursor do mouse para um ícone de "não permitido". */
+}
+
+/* Estilo específico para botões que não são de submissão (ex: Cancelar, Adicionar). */
+button[type="button"] {
+  background-color: #3498db; /* Define a cor de fundo para um azul. */
+  color: white; /* Define a cor do texto para branco. */
+}
+
+/* Estilo para o efeito 'hover' (quando o mouse está sobre o botão) para ambos os tipos de botão. */
+button[type="button"]:hover,
+button[type="submit"]:hover {
+  filter: brightness(1.1); /* Aumenta um pouco o brilho do botão, criando um efeito de destaque. */
+}
+
+/* Estilo para a linha horizontal <hr>. */
+hr {
+  margin: 2rem 0; /* Adiciona uma margem grande acima e abaixo da linha para separar seções. */
+  border: none; /* Remove a borda padrão. */
+  border-top: 1px solid #ccc; /* Cria uma linha fina cinza claro. */
+}
+
+/* Estilo para todos os títulos <h4>. */
+h4 {
+  margin-top: 1rem; /* Adiciona uma margem acima do título. */
+  color: #34495e; /* Define a cor do texto para um azul acinzentado. */
+}
