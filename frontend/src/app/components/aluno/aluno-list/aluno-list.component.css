@@ -1,36 +1,46 @@
 /* Container principal */
 div {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 40px auto;
-  padding: 20px;
-  background-color: #fefefe;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Título */
 h2 {
   text-align: center;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
-/* Botão "Novo Aluno" */
+/* Botão "Novo Aluno" e outros botões de ação */
 button {
-  background-color: #1976d2;
   color: white;
   border: none;
-  padding: 8px 14px;
-  margin-right: 6px;
-  border-radius: 5px;
+  padding: 10px 18px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #1565c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão principal (Novo Aluno) */
+h2 + button {
+  background-color: var(--primary-color);
+  display: block;
+  margin: 20px auto;
+}
+h2 + button:hover {
+  background-color: var(--primary-hover);
 }
 
 /* Tabela */
@@ -42,43 +52,55 @@ table {
 
 /* Cabeçalho da tabela */
 thead {
-  background-color: #1976d2;
-  color: white;
+  background-color: var(--background-tertiary);
 }
 
 th, td {
-  padding: 12px;
-  text-align: center;
-  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* Linhas alternadas */
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+th {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Linhas da tabela */
+tbody tr {
+  transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+  background-color: #333;
 }
 
 /* Mensagem de nenhum aluno */
 p {
   text-align: center;
   font-style: italic;
-  color: #666;
+  color: var(--text-secondary);
+  padding: 20px;
 }
 
-/* Botões de ação */
+/* Botões de ação na tabela */
 td button {
-  background-color: #f57c00;
   margin: 0 4px;
 }
 
-td button:hover {
-  background-color: #ef6c00;
+/* Botão editar */
+td button:first-of-type {
+  background-color: var(--success-color);
+}
+td button:first-of-type:hover {
+  background-color: var(--success-hover);
 }
 
 /* Botão excluir */
-td button:last-child {
-  background-color: #d32f2f;
+td button:last-of-type {
+  background-color: var(--danger-color);
 }
 
-td button:last-child:hover {
-  background-color: #c62828;
+td button:last-of-type:hover {
+  background-color: var(--danger-hover);
 }

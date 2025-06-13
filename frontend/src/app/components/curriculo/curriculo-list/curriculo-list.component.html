@@ -12,7 +12,6 @@
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>Curso ID</th>
           <th>Ano/Semestre</th>
           <th>Disciplinas Obrigatórias</th>
@@ -22,7 +21,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let curriculo of curriculos">
-          <td>{{ curriculo.id }}</td> <td>{{ curriculo.cursoId }}</td> <td>{{ curriculo.ano }}/{{ curriculo.semestre }}</td> <td>{{ curriculo.disciplinasObrigatorias.join(', ') }}</td>
+           <td>{{ curriculo.cursoId }}</td> <td>{{ curriculo.ano }}/{{ curriculo.semestre }}</td> <td>{{ curriculo.disciplinasObrigatorias.join(', ') }}</td>
 
           <td>{{ curriculo.disciplinasOptativas.join(', ') }}</td>
 

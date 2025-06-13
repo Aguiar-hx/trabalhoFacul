@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Definindo uma paleta de cores com variáveis CSS para um tema escuro */
+:root {
+  --background-primary: #1a1a1a; /* Fundo principal quase preto */
+  --background-secondary: #2c2c2c; /* Fundo para containers, tabelas e forms */
+  --background-tertiary: #3a3a3a; /* Fundo para cabeçalhos de tabela e inputs */
+  --border-color: #444; /* Cor da borda */
+  
+  --text-primary: #f0f0f0; /* Cor de texto principal (quase branco) */
+  --text-secondary: #b3b3b3; /* Cor de texto secundária (cinza claro) */
+  
+  --primary-color: #007bff; /* Azul para ações principais e links */
+  --primary-hover: #0056b3;
+  
+  --success-color: #28a745; /* Verde para sucesso e edição */
+  --success-hover: #218838;
+  
+  --danger-color: #dc3545; /* Vermelho para exclusão e erros */
+  --danger-hover: #c82333;
+
+  --warning-color: #ffc107; /* Amarelo/Laranja para alertas */
+  --warning-hover: #e0a800;
+
+  --font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Reset básico e estilos do corpo */
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilização da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

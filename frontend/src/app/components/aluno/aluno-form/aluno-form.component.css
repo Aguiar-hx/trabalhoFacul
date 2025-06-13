@@ -1,20 +1,20 @@
-/* Container principal */
+/* Container principal do formulário */
 div {
   max-width: 600px;
   margin: 40px auto;
-  padding: 20px 30px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  padding: 30px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Título */
 h2 {
   text-align: center;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
 /* Grupos de campo */
@@ -26,69 +26,81 @@ form > div {
 label {
   display: block;
   font-weight: bold;
-  margin-bottom: 6px;
-  color: #333;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
 }
 
 /* Inputs */
 input[type="text"],
 input[type="number"] {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  background-color: var(--background-tertiary);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
-  font-size: 14px;
-  transition: border 0.2s;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus {
-  border-color: #1976d2;
+  border-color: var(--primary-color);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
 /* Mensagens de erro */
 .text-danger {
-  color: #d32f2f;
-  font-size: 13px;
-  margin-top: 4px;
+  color: var(--danger-color);
+  font-size: 0.875rem;
+  margin-top: 6px;
+  display: block;
 }
 
 /* Separador */
 hr {
   margin: 30px 0 20px;
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border-color);
 }
 
 /* Botões */
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
   margin-right: 10px;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 /* Botão de salvar/atualizar */
 button[type="submit"] {
-  background-color: #388e3c;
+  background-color: var(--primary-color);
   color: white;
 }
 
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
 button[type="submit"]:disabled {
-  background-color: #a5d6a7;
+  background-color: #555;
+  color: #999;
   cursor: not-allowed;
+  transform: none;
 }
 
 /* Botão de cancelar */
 button[type="button"] {
-  background-color: #bdbdbd;
-  color: #333;
+  background-color: var(--background-tertiary);
+  color: var(--text-primary);
 }
 
-button:hover:not(:disabled) {
-  opacity: 0.9;
+button[type="button"]:hover {
+  background-color: #4d4d4d;
+  transform: translateY(-2px);
 }

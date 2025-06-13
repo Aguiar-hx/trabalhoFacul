@@ -1,78 +1,106 @@
-/* Estilo aplicado a todos os elementos <div> da página. */
+/* Container principal */
 div {
-  padding: 2rem; /* Adiciona um espaçamento interno de 2rem em todos os lados. */
-  font-family: Arial, sans-serif; /* Define a fonte do texto. O navegador tentará usar Arial, e se não encontrar, usará uma fonte genérica sans-serif. */
-  max-width: 1000px; /* Define a largura máxima do container. */
-  margin: auto; /* Quando combinado com max-width, este comando centraliza o container na página horizontalmente. */
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para todos os títulos <h2>. */
+/* Título */
 h2 {
-  color: #2c3e50; /* Define a cor do texto do título para um azul-escuro. */
-  margin-bottom: 1rem; /* Adiciona uma margem na parte de baixo do título, afastando-o do conteúdo seguinte. */
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-/* Estilo geral para todos os botões <button>. */
+/* Botão "Novo Aluno" e outros botões de ação */
 button {
-  padding: 0.4rem 0.8rem; /* Adiciona espaçamento interno para o texto do botão não ficar colado nas bordas. */
-  margin: 0.3rem; /* Adiciona uma pequena margem externa ao redor de cada botão. */
-  border: none; /* Remove qualquer borda padrão do botão. */
-  border-radius: 6px; /* Arredonda os cantos do botão. */
-  font-weight: bold; /* Deixa o texto do botão em negrito. */
-  cursor: pointer; /* Muda o cursor do mouse para uma "mãozinha" quando ele passa sobre o botão. */
-  transition: background-color 0.3s; /* Cria uma transição suave na cor de fundo com duração de 0.3s. */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
 }
 
-/* Estilo para o efeito 'hover' (quando o mouse está sobre o botão). */
 button:hover {
-  filter: brightness(1.1); /* Aumenta um pouco o brilho do botão, criando um efeito de destaque. */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para o PRIMEIRO botão filho de seu container (ex: o botão "Novo"). */
-button:first-child {
-  background-color: #2ecc71; /* Define a cor de fundo para um verde (sucesso). */
-  color: white; /* Define a cor do texto para branco. */
+/* Botão principal (Novo Aluno) */
+h2 + button {
+  background-color: var(--primary-color);
+  display: block;
+  margin: 20px auto;
+}
+h2 + button:hover {
+  background-color: var(--primary-hover);
 }
 
-/* Estilo para o SEGUNDO botão filho de seu container (ex: o botão "Editar"). */
-button:nth-child(2) {
-  background-color: #3498db; /* Define a cor de fundo para um azul. */
-  color: white; /* Define a cor do texto para branco. */
-}
-
-/* Estilo para o TERCEIRO botão filho de seu container (ex: o botão "Excluir"). */
-button:nth-child(3) {
-  background-color: #e74c3c; /* Define a cor de fundo para um vermelho (perigo/excluir). */
-  color: white; /* Define a cor do texto para branco. */
-}
-
-/* Estilo para todas as tabelas <table>. */
+/* Tabela */
 table {
-  width: 100%; /* Faz a tabela ocupar 100% da largura do seu container. */
-  border-collapse: collapse; /* Remove o espaço entre as bordas das células, criando uma tabela com linhas simples. */
-  margin-top: 1rem; /* Adiciona uma margem no topo da tabela, afastando-a do conteúdo acima. */
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-/* Estilo para o cabeçalho da tabela (<thead>). */
+/* Cabeçalho da tabela */
 thead {
-  background-color: #34495e; /* Define uma cor de fundo azul-acinzentada escura para o cabeçalho. */
-  color: white; /* Define a cor do texto do cabeçalho para branco. */
+  background-color: var(--background-tertiary);
 }
 
-/* Estilo aplicado tanto aos cabeçalhos (<th>) quanto às células de dados (<td>) da tabela. */
 th, td {
-  text-align: left; /* Alinha o texto à esquerda dentro da célula. */
-  padding: 0.75rem; /* Adiciona um bom espaçamento interno nas células. */
-  border-bottom: 1px solid #ddd; /* Adiciona uma linha cinza claro na parte de baixo de cada linha. */
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* Estilo para o efeito 'hover' nas linhas do CORPO da tabela (<tbody>). */
+th {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Linhas da tabela */
+tbody tr {
+  transition: background-color 0.2s;
+}
+
 tbody tr:hover {
-  background-color: #f2f2f2; /* Muda a cor de fundo da linha para um cinza bem claro quando o mouse passa sobre ela. */
+  background-color: #333;
 }
 
-/* Estilo para todos os parágrafos <p>. */
+/* Mensagem de nenhum aluno */
 p {
-  color: #7f8c8d; /* Define a cor do texto para um cinza. */
-  font-size: 1rem; /* Define o tamanho da fonte. */
+  text-align: center;
+  font-style: italic;
+  color: var(--text-secondary);
+  padding: 20px;
+}
+
+/* Botões de ação na tabela */
+td button {
+  margin: 0 4px;
+}
+
+/* Botão editar */
+td button:first-of-type {
+  background-color: var(--success-color);
+}
+td button:first-of-type:hover {
+  background-color: var(--success-hover);
+}
+
+/* Botão excluir */
+td button:last-of-type {
+  background-color: var(--danger-color);
+}
+
+td button:last-of-type:hover {
+  background-color: var(--danger-hover);
 }

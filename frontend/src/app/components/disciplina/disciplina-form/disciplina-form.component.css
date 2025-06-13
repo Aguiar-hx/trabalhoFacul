@@ -1,92 +1,106 @@
-/* Estilo aplicado ao container principal (provavelmente o que envolve o formulário). */
+/* Container principal do formulário */
 div {
-  max-width: 600px; /* Define a largura máxima do container. Ele não ficará mais largo que 600 pixels. */
-  margin: 2rem auto; /* Define as margens. '2rem' para cima e para baixo, e 'auto' para esquerda e direita, o que centraliza o container na página. */
-  padding: 2rem; /* Adiciona um bom espaçamento interno em todos os lados. */
-  background-color: #ffffff; /* Define a cor de fundo como branco. */
-  border-radius: 8px; /* Arredonda os cantos do container. */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Adiciona uma sombra muito sutil ao redor do container, dando um efeito de "cartão flutuante". */
-  font-family: 'Segoe UI', sans-serif; /* Define a família de fontes para o texto dentro do container. */
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para todos os títulos <h2>. */
+/* Título */
 h2 {
-  text-align: center; /* Centraliza o texto do título. */
-  color: #2c3e50; /* Define a cor do texto para um azul-escuro. */
-  margin-bottom: 1.5rem; /* Adiciona uma margem na parte de baixo do título, afastando-o do formulário. */
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
-/* Estilo para os elementos <div> que são filhos diretos de um <form>. */
-/* Isso ajuda a espaçar cada grupo de label/input no formulário. */
+/* Grupos de campo */
 form > div {
-  margin-bottom: 1rem; /* Adiciona uma margem abaixo de cada grupo. */
+  margin-bottom: 20px;
 }
 
-/* Estilo para todas as etiquetas <label> dos formulários. */
+/* Labels */
 label {
-  display: block; /* Faz com que o label ocupe toda a largura disponível, colocando o campo de input abaixo dele. */
-  margin-bottom: 0.4rem; /* Adiciona uma pequena margem abaixo do label. */
-  font-weight: 600; /* Deixa a fonte do label um pouco mais espessa (semi-negrito). */
-  color: #34495e; /* Define a cor do texto para um azul-acinzentado. */
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
 }
 
-/* Estilo aplicado tanto para campos <input> quanto para áreas de texto <textarea>. */
-input,
-textarea {
-  width: 100%; /* Faz o campo ocupar 100% da largura do seu container. */
-  padding: 0.6rem; /* Adiciona um espaçamento interno para o texto não ficar colado nas bordas. */
-  border: 1px solid #ccc; /* Define uma borda cinza clara de 1 pixel. */
-  border-radius: 4px; /* Arredonda os cantos do campo. */
-  font-size: 1rem; /* Define o tamanho da fonte do texto que o usuário digita. */
-  box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total do elemento, evitando que ele "vaze" do container. */
-  transition: border-color 0.3s; /* Cria uma transição suave na cor da borda, com duração de 0.3s. */
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--background-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Estilo para o campo quando ele está em foco (quando o usuário clica nele). */
-input:focus,
-textarea:focus {
-  border-color: #3498db; /* Muda a cor da borda para um azul claro, dando um feedback visual de que o campo está ativo. */
-  outline: none; /* Remove o contorno padrão que alguns navegadores adicionam, para um visual mais limpo. */
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
-/* Estilo para a linha horizontal <hr>. */
+/* Mensagens de erro */
+.text-danger {
+  color: var(--danger-color);
+  font-size: 0.875rem;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Separador */
 hr {
-  margin: 1.5rem 0; /* Adiciona uma margem acima e abaixo da linha para separar seções. */
-  border: none; /* Remove a borda padrão. */
-  border-top: 1px solid #e0e0e0; /* Cria uma linha fina cinza muito clara. */
+  margin: 30px 0 20px;
+  border: none;
+  border-top: 1px solid var(--border-color);
 }
 
-/* Estilo geral para todos os botões <button>. */
+/* Botões */
 button {
-  padding: 0.6rem 1.2rem; /* Adiciona espaçamento interno para o botão ficar maior e mais fácil de clicar. */
-  margin-right: 1rem; /* Adiciona uma margem à direita para espaçar os botões entre si. */
-  font-size: 1rem; /* Define o tamanho do texto do botão. */
-  font-weight: bold; /* Deixa o texto do botão em negrito. */
-  border: none; /* Remove qualquer borda padrão. */
-  border-radius: 5px; /* Arredonda os cantos do botão. */
-  cursor: pointer; /* Muda o cursor do mouse para uma "mãozinha" ao passar sobre o botão. */
-  transition: background-color 0.3s; /* Cria uma transição suave para a cor de fundo. */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Estilo específico para botões de submissão de formulário (ex: Salvar, Atualizar). */
+/* Botão de salvar/atualizar */
 button[type="submit"] {
-  background-color: #27ae60; /* Define a cor de fundo para um verde (sucesso). */
-  color: white; /* Define a cor do texto para branco. */
+  background-color: var(--primary-color);
+  color: white;
 }
 
-/* Estilo para o botão de submissão quando ele está desabilitado. */
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
 button[type="submit"]:disabled {
-  background-color: #95a5a6; /* Muda a cor de fundo para um cinza. */
-  cursor: not-allowed; /* Muda o cursor do mouse para um ícone de "não permitido". */
+  background-color: #555;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
 }
 
-/* Estilo específico para botões que não são de submissão (ex: Cancelar). */
+/* Botão de cancelar */
 button[type="button"] {
-  background-color: #e74c3c; /* Define a cor de fundo para um vermelho (perigo/cancelar). */
-  color: white; /* Define a cor do texto para branco. */
+  background-color: var(--background-tertiary);
+  color: var(--text-primary);
 }
 
-/* Estilo para o efeito 'hover' (quando o mouse está sobre o botão), mas somente se o botão NÃO estiver desabilitado. */
-button:hover:not(:disabled) {
-  filter: brightness(1.1); /* Aumenta um pouco o brilho do botão, criando um efeito de destaque. */
+button[type="button"]:hover {
+  background-color: #4d4d4d;
+  transform: translateY(-2px);
 }
